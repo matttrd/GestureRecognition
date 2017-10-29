@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Sep 23 11:50:05 2017
-
-@author: Matteo
+Activity Recognition on UCI HAR Dataset
+Multichannel Conv Net: each channel (axis) is convolved independently and finally flattened in a encoding layers which is followed by a Dense net
 """
 
 import pandas as pd
@@ -120,7 +119,7 @@ model_cnn.summary()
 Y_train = to_categorical(y_train-1, num_classes=6)
 X_train_reshaped = X_train[:,:,:,np.newaxis]
 X_train_reshaped = np.swapaxes(X_train_reshaped, 1,2)
-epochs = 50
+epochs = 100
 with h5py.File('model_checkpoint.hdf5','w') as f:
     model_checkpoint = ModelCheckpoint(f.filename, period = 1)
 csv_logger = CSVLogger('training.log')
@@ -203,7 +202,7 @@ model_cnn_rot.summary()
 Y_train = to_categorical(y_train-1, num_classes=6)
 X_train_reshaped = X_train[:,:,:,np.newaxis]
 X_train_reshaped = np.swapaxes(X_train_reshaped, 1,2)
-epochs = 40
+epochs = 100
 with h5py.File('model_checkpoint_rotout.hdf5','w') as f:
     model_checkpoint = ModelCheckpoint(f.filename, period = 5)
 csv_logger = CSVLogger('training_rotout.log')
