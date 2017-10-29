@@ -1,9 +1,5 @@
-# -*- coding: utf-8 -*-
 """
-Created on Sun Sep 24 12:35:44 2017
-
-@author: Matteo
-Implentation of independent time-channels 
+Implementation of Conv Layer with independent time-channels 
 """
 
 
