@@ -1,13 +1,6 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Oct  4 16:46:06 2017
-
-@author: Matteo
-"""
-
 '''
 
-Import Opportunity Dataset [metti cit]
+Import Opportunity Dataset [citation needed]
 
 '''
 
